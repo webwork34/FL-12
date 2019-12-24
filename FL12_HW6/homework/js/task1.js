@@ -6,7 +6,6 @@ const two = 2,
       four = 4;
 
 if(isNaN(a) || isNaN(b) || isNaN(c) || 
-  a === '' || b === '' || c === '' || 
   a === null || b === null || c === null || 
   a.trim().length === 0 || b.trim().length === 0 || c.trim().length === 0 ||
   a === '0' && b === '0' ){
