@@ -3,7 +3,6 @@ let b = prompt('Введіть сторону B:', '');
 let c = prompt('Введіть сторону C:', '');
 
 if(isNaN(a) || isNaN(b) || isNaN(c) || 
-  a === '' || b === '' || c === '' || 
   a === null || b === null || c === null ||
   a.trim().length === 0 || b.trim().length === 0 || c.trim().length === 0){
   alert('input values. should be ONLY numbers');
