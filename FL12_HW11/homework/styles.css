@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  padding: 30px;
+}
+ul li{
+  list-style: none;
+  margin-left: 10px;
+  cursor: pointer;
+  margin-top: 3px;
+}
+.icon_folder{
+  color: yellow;
+  font-size: 20px;
+}
+.file{
+  font-size: 20px;
+  color: grey;
+}
+p{
+  position: relative;
+}
+span{
+  position: absolute;
+  top: 3px;
+  left: 25px;
+}
+.folder,
+.material-icons{
+  user-select: none;
+}
+.not_empty:hover{
+  background: lightgrey;
+}
+.empty{
+  font-style: italic;
+}
+.nested{
+  display: none;
+}
+.active{
+  display: block;
+}
