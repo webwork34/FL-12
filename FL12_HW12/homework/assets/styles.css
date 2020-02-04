@@ -6,41 +6,44 @@
 .page{
   border: 1px solid black;
   width: 90%;
-  /* height: 90vh; */
-  margin: 10px auto;
-  padding: 20px;
+  max-width: 600px;
+  margin: 10px;
+  padding: 30px;
 }
 #add_new_set_btn{
   float: right;
   padding: 10px;
 }
 #add_new,
-#edit{
+#edit,
+span{
   display: none;
 }
-
 button{
   margin-top: 5px;
 }
-.block{
+.block,
+.studied_block{
   border: 1px solid black;
   width: 300px;
-  height: 100px;
   margin-top: 10px;
   padding: 10px;
 }
+.studied_block{
+  background: lightgray;
+}
+.edit_term,
+.edit_defenition,
 .input_in_block{
   margin-top: 10px;
   border: none;
   border-bottom: 1px solid black;
   outline: none;
 }
-#add_terms,
-#save_terms,
-#cancel,
-.remove_term_btn,
-.remove_set_btn,
-.edit_set_btn{
+button{
   display: block;
   padding: 5px;
+}
+p{
+  height: 20px;
 }
