@@ -1,0 +1,117 @@
+@import "variables";
+
+.navbar{
+  padding: 0 @padding_desktop;
+  border-bottom: @border rgb(209, 199, 199);
+
+  img{
+    margin-right: 20px;
+  }
+  #navbarTogglerDemo02{
+    .nav-link{
+      color: black;
+
+      &:hover{
+        background: @main_color;
+        color: white;
+      }
+    }
+  }
+}
+
+main{
+  padding: 20px @padding_desktop;
+
+  .header_bottom{
+    border-bottom: @border @main_color;
+
+    h1{
+      color: @main_color;
+    }
+  }
+  
+  img{
+    width: 100%;
+  }
+  .change_padding{
+    padding-left: 25px;
+  }
+  .header_h3{
+    color: @main_color;
+    margin-top: 15px;
+  }
+  .description{
+    line-height: normal;
+    font-size: 13px;
+  }
+
+  .myCard{
+    padding: 0;
+    width: 23%;
+    margin-bottom: 15px;
+
+    &__description{
+      text-align: center;
+      color: white;
+      line-height: 100%;
+
+      h6{
+      margin: 8px 0;
+      }
+    }
+  }
+  .card1{
+    border: @border #D7514C;
+    background: #D7514C;
+  }
+  .card2{
+    border: @border #2A74BF;
+    background: #2A74BF;
+  }
+  .card3{
+    border: @border #D8C11D;
+    background: #D8C11D;
+  }
+  .card4{
+    border: @border #4D944B;
+    background: #4D944B;
+  }
+}
+
+footer{
+  background: #666;
+  color: white;
+  margin: 0 100px;
+}
+
+@media (max-width: 991.98px){
+  .navbar{
+    padding: 0 @padding_tablet;
+  }
+  main{
+    padding: 20px @padding_tablet;
+
+    .change_padding{
+      padding-left: 0;
+    }
+  }
+  footer{
+    margin: 0 50px;
+  }
+}
+
+@media (max-width: 767.98px){
+  .navbar{
+    padding: 0 @padding_mobile;
+  }
+  main{
+    padding: 20px @padding_mobile;
+
+    .myCard{
+      width: 48%;
+    }
+  }
+  footer{
+    margin: 0 10px;
+  }
+}
