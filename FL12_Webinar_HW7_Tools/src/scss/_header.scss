@@ -1,0 +1,39 @@
+header{
+  padding: 20px;
+  border-bottom: $B;
+  background-image: url('./../img/logo1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 300px;
+  position: relative;
+  text-align: center;
+
+  .rules{
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+
+    .rock{
+      color: green;
+    }
+    .paper{
+      color: blue;
+    }
+    .scissors{
+      color: red;
+    }
+  }
+
+  h3{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: crimson;
+    font-size: 20px;
+  }
+}

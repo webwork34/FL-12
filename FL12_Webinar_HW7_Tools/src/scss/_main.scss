@@ -1,0 +1,54 @@
+main{
+  padding: 20px;
+
+  h2{
+    text-align: center;
+    text-decoration: underline;
+  }
+  
+  .playBtns{
+    margin-top: 20px;
+    border: $B;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    max-width: 400px;
+    margin: 10px auto;
+  }
+
+  button{
+    padding: 5px 20px;
+    user-select: none;
+  }
+  .reset-and-result{
+    text-align: center;
+
+    .red{
+      color: red;
+    }
+    .green{
+      color: green;
+    }
+    .black{
+      color: black;
+    }
+    .result{
+      margin-top: 20px;
+    }
+    .winner{
+      margin-top: 20px;
+      font-size: 24px;
+    }
+
+    .winner-img{
+      width: 300px;
+      margin: 0 auto;
+
+      .you-winner,
+      .computer-winner{
+        width: 100%;
+        display: none;
+      }
+    }
+  }
+}
