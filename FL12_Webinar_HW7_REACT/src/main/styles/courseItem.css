@@ -1,0 +1,25 @@
+.course-item{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 30px 17px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.title{
+  width: 150px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.description{
+  width: 300px;
+}
+
+.date,
+.duration{
+  width: 75px;
+  text-align: center;
+}

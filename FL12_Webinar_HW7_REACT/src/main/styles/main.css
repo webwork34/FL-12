@@ -1,0 +1,32 @@
+.add-course{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.search{
+  width: 100%;
+  font-size: inherit;
+  padding: 9px 45px;
+  border-radius: 5px;
+  outline: none;
+}
+
+label{
+  width: 60%;
+  position: relative;
+}
+
+label:before{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.add_btn{
+  padding: 10px 20px;
+  text-decoration: none;
+  background: lightseagreen;
+  color: white;
+  border-radius: 5px;
+}

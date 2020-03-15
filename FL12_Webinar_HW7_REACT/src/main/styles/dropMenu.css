@@ -1,0 +1,52 @@
+.cont-drop-menu{
+  margin-top: -15px;
+}
+
+.edit-remove{
+  cursor: pointer;
+  font-size: 30px;
+  user-select: none;
+}
+
+.drop-menu{
+  border: 1px solid black;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  right: 65px;
+  top: 40px;
+  background: lightgreen;
+  z-index: 100;
+  padding: 7px;
+}
+
+.edit,
+.delete{
+  cursor: pointer;
+  width: 26px;
+}
+
+.edit:hover,
+.delete:hover{
+  color: red;
+}
+
+.position{
+  position: relative;
+}
+
+.icon-size{
+  width: 15px;
+}
+
+.icon-delete{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.span-edit-delete{
+  position: absolute;
+  top: 0;
+  left: 20px;
+}

@@ -1,0 +1,34 @@
+.add-edit{
+  border: 1px solid black;
+  padding: 20px;
+}
+
+h2{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.border{
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.width-input{
+  width: 100%;
+}
+
+.heigh-input{
+  height: 25px;
+}
+
+.textarea{
+  height: 100px;
+}
+
+.dad{
+  display: flex;
+  justify-content: space-between;
+}
