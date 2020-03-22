@@ -1,0 +1,65 @@
+<div class="container">
+  <h2>New User</h2>
+  <a routerLink="/users" class="arrow">&#8592;</a>
+
+  <form [formGroup]="form" (ngSubmit)="saveNewUser()">
+    <div class="form-input">
+      <label for="name"><p>Name
+        <span 
+          *ngIf="form.get('name').invalid"
+          class="red"
+        >*</span>
+        <span 
+          *ngIf="form.get('name').valid"
+          class="green"
+        >*</span>
+      </p></label>
+      <input type="text" name="name" id="name" formControlName="name" class="require">
+    </div>
+
+    <div class="form-input">
+      <label for="email"><p>Email
+        <span 
+          *ngIf="form.get('email').invalid"
+          class="red"
+        >*</span>
+        <span 
+          *ngIf="form.get('email').valid"
+          class="green"
+        >*</span>
+      </p></label>
+      <input type="email" name="email" id="email" formControlName="email" class="require">
+    </div>
+
+    <div class="form-input">
+      <label for="phone"><p>Phone
+        <span 
+          *ngIf="form.get('phone').invalid"
+          class="red"
+        >*</span>
+        <span 
+          *ngIf="form.get('phone').valid"
+          class="green"
+        >*</span>
+      </p></label>
+      <input type="tel" name="phone" id="phone" formControlName="phone" class="require">
+    </div>
+
+    <div class="form-input">
+      <label for="address"><p>Address</p></label>
+      <input type="text" name="address" id="address" formControlName="address">
+    </div>
+
+    <div class="form-input">
+      <label for="website"><p>Website</p></label>
+      <input type="url" name="website" id="website" formControlName="website">
+    </div>
+
+    <div class="btn-cont">
+      <button type="submit" [disabled]="form.invalid">Save</button>
+      <input type="button" value="Discard" class="button" (click)="discard()">
+    </div>
+   
+  </form>
+
+</div>
