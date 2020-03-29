@@ -1,0 +1,121 @@
+<div class="search-add-div">
+  <input 
+    type="search" 
+    placeholder="Search" 
+    class="search-input" 
+    [(ngModel)]="searchStr"
+  >
+  <button 
+    id="add-btn"
+    (click)="addUser()"
+  >Add new user</button>
+</div>
+
+<div [ngStyle]="{display: toggleDisplayAdd ? 'flex' : 'none'}">
+  <form 
+    [formGroup]="formAdd" 
+    (ngSubmit)="saveNewUser()" 
+    class="border center"
+    [class.red]="formAdd.invalid"
+    [class.green]="formAdd.valid"
+  >
+    <input type="text" placeholder="name" class="input-style" formControlName="name"/>
+    <input type="email" placeholder="e-mail" class="input-style email" formControlName="email"/>
+    <input type="tel" placeholder="phone" class="input-style" formControlName="phone" />
+    <div>
+      <button
+        type="submit"
+        [disabled]="formAdd.invalid"
+      >Save</button>
+      <button
+        (click)="cancelAddNew()"
+        type="button"
+      >Discard</button>
+    </div>
+  </form>
+</div>
+
+<div>
+  <ul *ngIf="usersService.users.length; else noUsers" class="center">
+    <li *ngFor="let user of usersService.users | search:searchStr; let i = index;">
+      <form 
+        [formGroup]="formEdit" 
+        class="border"
+      >
+        <span>{{ i + 1 }}. </span>
+        <input 
+          *ngIf="usersService.users[i].disabled"
+          type="text" 
+          value="{{ user.name }}" 
+          class="input-style" 
+          formControlName="name"
+        />
+        <input 
+          *ngIf="usersService.users[i].disabled"
+          type="email" 
+          value="{{ user.email }}" 
+          class="input-style email" 
+          formControlName="email"
+        />
+        <input 
+          *ngIf="usersService.users[i].disabled"
+          type="tel" 
+          value="{{ user.phone }}" 
+          class="input-style" 
+          formControlName="phone"
+        />
+
+<!-- input for edit begin -->
+        <input 
+          *ngIf="!usersService.users[i].disabled"
+          type="text" 
+          value="{{ user.name }}" 
+          class="input-edit" 
+          formControlName="nameEdited"
+        />
+        <input 
+          *ngIf="!usersService.users[i].disabled"
+          type="email" 
+          value="{{ user.email }}" 
+          class="input-edit email" 
+          formControlName="emailEdited"
+        />
+        <input 
+          *ngIf="!usersService.users[i].disabled"
+          type="tel" 
+          value="{{ user.phone }}" 
+          class="input-edit" 
+          formControlName="phoneEdited"
+        />
+<!-- input for edit end -->
+
+        <div *ngIf="usersService.users[i].disabled">
+          <button 
+            type="button"
+            (click)="removeUser(user.id)"
+          >Delete</button>
+          <button 
+            type="button"
+            (click)="editUser(user.id, user)"
+          >Edit</button>
+        </div>
+
+        <div *ngIf="!usersService.users[i].disabled">
+          <button 
+            type="submit"
+            [disabled]="formEdit.invalid"
+            (click)="saveChanges(user.id)"
+          >Save</button>
+          <button 
+            type="button"
+            (click)="discard(user)"
+          >Discard</button>
+        </div>
+      </form>
+    </li>
+  </ul>
+</div>
+
+<ng-template #noUsers>
+  <h2>No users now</h2>
+</ng-template>
