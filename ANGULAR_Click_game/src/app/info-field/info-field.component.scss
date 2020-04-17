@@ -1,0 +1,52 @@
+.info-field{
+
+  .duration{
+    margin-right: 5px;
+  }
+
+  li{
+    list-style: none;
+  }
+
+  .btn{
+    padding: 10px 20px;
+    margin-top: 10px;
+
+    &:first-of-type{
+      margin-right: 10px;
+    }
+  }
+
+  h4{
+    margin-top: 10px;
+  }
+
+  .congratulation{
+    margin-top: 20px;
+
+    h2{
+      color: green;
+    }
+    
+    p{
+      color: rgb(172, 13, 172);
+      font-weight: bold;
+    }
+  }
+  
+  .no-win{
+    margin-top: 20px;
+
+    .good{
+      color: green;
+    }
+
+    .bad{
+      color: rgb(173, 27, 27)
+    }
+
+    .name{
+      color: indigo;
+    }
+  }
+}
