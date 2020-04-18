@@ -1,0 +1,19 @@
+<div class="play-field">
+    <h2>Hello, {{counterServise.name}}!</h2>
+    <p>You have made <span>{{counterServise.counter}}</span> clicks </p>
+
+      <button 
+        class="red-btn"
+        *ngIf="!counterServise.showBtn"
+        (click)="start()"
+      >Click to start</button>
+  
+      <button 
+        class="red-btn"
+        *ngIf="counterServise.showBtn"
+        (click)="countClick()"
+        [disabled]="counterServise.btnDisabled"
+      >Click to count</button>
+  
+    <p>Timer: <span>{{counterServise.timer}}</span> sec</p>
+</div>
